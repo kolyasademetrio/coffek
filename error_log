@@ -1,0 +1,39 @@
+[18-Apr-2018 08:24:48 UTC] PHP Fatal error:  Class 'WP_Widget_Media_Image' not found in /home/seotm/coffeepos.seotm.pro/wp-includes/class-wp-widget-factory.php on line 100
+[18-Apr-2018 08:24:54 UTC] PHP Fatal error:  Class 'WP_Widget_Media_Image' not found in /home/seotm/coffeepos.seotm.pro/wp-includes/class-wp-widget-factory.php on line 100
+[18-Apr-2018 09:11:59 UTC] PHP Parse error:  syntax error, unexpected ''vxvx'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/functions.php on line 784
+[18-Apr-2018 09:14:10 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/functions.php on line 944
+[18-Apr-2018 09:14:32 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/functions.php on line 944
+[18-Apr-2018 09:36:06 UTC] PHP Warning:  ob_get_clean() expects exactly 0 parameters, 1 given in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/header.php on line 40
+[18-Apr-2018 09:36:47 UTC] PHP Parse error:  syntax error, unexpected '$header__phone' (T_VARIABLE) in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/header.php on line 42
+[18-Apr-2018 09:59:57 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/functions.php on line 1503
+[18-Apr-2018 11:30:23 UTC] PHP Warning:  require_once(/home/seotm/coffeepos.seotm.pro/wp-content/themes/media.php): failed to open stream: No such file or directory in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/functions.php on line 1371
+[18-Apr-2018 11:30:23 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/seotm/coffeepos.seotm.pro/wp-content/themes/media.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/functions.php on line 1371
+[24-Apr-2018 09:48:27 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 206
+[24-Apr-2018 09:48:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 206
+[24-Apr-2018 10:21:52 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 211
+[24-Apr-2018 10:21:55 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 211
+[24-Apr-2018 10:21:57 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 211
+[24-Apr-2018 12:57:52 UTC] PHP Fatal error:  [] operator not supported for strings in /home/seotm/coffeepos.seotm.pro/wp-content/plugins/custom-field-suite/includes/api.php on line 132
+[24-Apr-2018 12:58:26 UTC] PHP Fatal error:  [] operator not supported for strings in /home/seotm/coffeepos.seotm.pro/wp-content/plugins/custom-field-suite/includes/api.php on line 132
+[24-Apr-2018 14:27:15 UTC] PHP Fatal error:  Function name must be a string in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 265
+[24-Apr-2018 14:27:19 UTC] PHP Fatal error:  Function name must be a string in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 265
+[24-Apr-2018 14:27:29 UTC] PHP Fatal error:  Function name must be a string in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 265
+[24-Apr-2018 14:27:35 UTC] PHP Fatal error:  Function name must be a string in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 265
+[24-Apr-2018 14:28:06 UTC] PHP Fatal error:  Function name must be a string in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 265
+[24-Apr-2018 14:29:45 UTC] PHP Fatal error:  Function name must be a string in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 265
+[24-Apr-2018 14:30:23 UTC] PHP Fatal error:  Function name must be a string in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 265
+[24-Apr-2018 14:31:03 UTC] PHP Fatal error:  Function name must be a string in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 265
+[24-Apr-2018 14:32:05 UTC] PHP Fatal error:  Function name must be a string in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 265
+[24-Apr-2018 14:32:20 UTC] PHP Fatal error:  Function name must be a string in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 265
+[24-Apr-2018 14:32:31 UTC] PHP Fatal error:  Function name must be a string in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 266
+[24-Apr-2018 14:32:41 UTC] PHP Fatal error:  Function name must be a string in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 265
+[24-Apr-2018 14:33:06 UTC] PHP Fatal error:  Function name must be a string in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 265
+[24-Apr-2018 14:33:30 UTC] PHP Fatal error:  Function name must be a string in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 265
+[25-Apr-2018 10:41:19 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 445
+[25-Apr-2018 10:41:22 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 445
+[25-Apr-2018 10:41:22 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 445
+[25-Apr-2018 10:41:47 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 445
+[25-Apr-2018 10:41:55 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 445
+[25-Apr-2018 10:42:00 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 445
+[25-Apr-2018 10:44:24 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 445
+[27-Apr-2018 09:56:36 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/seotm/coffeepos.seotm.pro/wp-content/themes/twentyfifteen/templates/custom-home.php on line 236

@@ -1,0 +1,3348 @@
+/*
+Theme Name: CoffeePOS
+Theme URI: https://wordpress.org/themes/twentyfifteen/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
+Version: 1.9
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, two-columns, left-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: twentyfifteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    -webkit-transition: all .6s ease 0s;
+    -moz-transition: all .6s ease 0s;
+    -o-transition: all .6s ease 0s;
+    transition: all .6s ease 0s;
+}
+
+a:hover,
+a:focus,
+a:focus:active {
+    text-decoration: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+html,
+body/*,
+.wrapper__main,
+.content__main,
+.site__main*/ {
+    height: 100%;
+}
+
+.nowrap {
+    white-space: nowrap !important;
+}
+
+@media ( max-width: 767px ) {
+	.container,
+    div[class^="col-"] {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+    .row {
+        margin-right: -12px !important;
+        margin-left: -12px !important;
+    }
+}
+
+.content__main {
+    position: relative;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* ------------------------------------->>> header <<<------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+
+@media ( min-width: 768px ) {
+    .header__container,
+    .header__col {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+.header {
+    background-color: rgba(0, 0, 0, .3);
+
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    -webkit-transition: all .6s ease 0s;
+    -moz-transition: all .6s ease 0s;
+    -o-transition: all .6s ease 0s;
+    transition: all .6s ease 0s;
+}
+
+.header__inner {
+    padding: 30px 0;
+    position: relative;
+}
+
+.header.sticky {
+    background-color: rgba(0, 0, 0, .9);
+    position: fixed;
+}
+
+.header.sticky .header__inner {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    -webkit-transition: all .6s ease 0s;
+    -moz-transition: all .6s ease 0s;
+    -o-transition: all .6s ease 0s;
+    transition: all .6s ease 0s;
+}
+
+.header__inner:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header__langSwitcherWrap {
+    position: absolute;
+    top: 14px;
+    right: 0;
+}
+
+.sticky .header__langSwitcherWrap {
+    top: 5px;
+}
+
+.header__logoWrap {
+    float: left;
+}
+
+.header__logoWrap a {
+    display: block;
+}
+
+.header__logoWrap a img {
+    display: inline-block;
+    width: 389px;
+    max-width: 100%;
+    height: auto;
+}
+
+.header__contWrap:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header__contWrap {
+    float: right;
+}
+
+.header__phone {
+    float: left;
+    position: relative;
+    padding-left: 50px;
+    font-family: "RobotoCondRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 32px;
+    white-space: nowrap;
+    color: #f36f46;
+    margin: 17px 20px 17px 0;
+}
+
+.header__phone:hover,
+.header__phone:focus,
+.header__phone:focus:active {
+    color: #f36f46;
+    text-decoration: none;
+}
+
+.header__phone:before {
+    content: '';
+    width: 32px;
+    height: 32px;
+    background: url(https://coffeepos.com.ua/wp-content/uploads/2018/04/phone_header.png) no-repeat 0 0;
+    -webkit-background-size: 32px 32px;
+    background-size: 32px 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.header__menuWrap {
+    float: left;
+    margin: 5px 0;
+}
+
+.header__menuWrap ul:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header__menuWrap ul:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 16px;
+    bottom: 16px;
+    left: 0;
+    width: 1px;
+    background-color: #c6cdcd;
+}
+
+.header__menuWrap ul {
+    position: relative;
+}
+
+.header__menuWrap ul li {
+    float: left;
+    margin: 0 16px;
+}
+
+.header__menuWrap ul li a {
+    display: block;
+    line-height: 54px;
+    margin: 2px 0;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: all .6s ease 0s;
+    -moz-transition: all .6s ease 0s;
+    -o-transition: all .6s ease 0s;
+    transition: all .6s ease 0s;
+    
+    font-family: "RobotoCondRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 22px;
+    color: #fff;
+}
+
+.header__menuWrap ul li a:hover {
+    border-color: #f36f46;
+    text-decoration: none;
+}
+
+.header__menuWrap ul li a:focus,
+.header__menuWrap ul li a:focus:active {
+    text-decoration: none;
+}
+
+.header__authWrap {
+    float: left;
+}
+
+.header__authLink {
+    display: block;
+    line-height: 68px;
+    padding: 0 25px;
+    font-family: "RobotoCondRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 25px;
+    color: #fff;
+    background-color: #f36f46;
+    -webkit-border-radius: 34px;
+    -moz-border-radius: 34px;
+    border-radius: 34px;
+    border: 1px solid #f36f46;
+
+    -webkit-transition: all .6s ease 0s;
+    -moz-transition: all .6s ease 0s;
+    -o-transition: all .6s ease 0s;
+    transition: all .6s ease 0s;
+}
+
+.header__authLink p,
+.footer__tryLink p {
+    margin: 0;
+    padding: 0;
+}
+
+.header__authLink:hover,
+.header__authLink:focus:hover {
+    color: #f36f46;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.header__authLink:focus {
+    color: #fff;
+    background-color: #f36f46;
+    text-decoration: none;
+}
+
+.header__socialLangWrap {
+    float: left;
+    padding: 18px 0;
+    margin-left: 29px;
+}
+
+.social__wrap ul:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.social__wrap ul li {
+    float: left;
+    margin-right: 20px;
+}
+
+.social__wrap ul li:last-child {
+    margin-right: 0;
+}
+
+.social__wrap ul li a {
+    font-size: 0;
+    width: 32px;
+    height: 32px;
+    -webkit-background-size: 64px 32px;
+    background-size: 68px 32px;
+    display: block;
+
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+.social__wrap ul li:nth-child(1) a {
+    background: url(https://coffeepos.com.ua/wp-content/uploads/2018/04/youtube_icon.png) no-repeat 0 0;
+}
+
+.social__wrap ul li:nth-child(2) a {
+    background: url(https://coffeepos.com.ua/wp-content/uploads/2018/04/insta_icon.png) no-repeat 0 0;
+}
+
+.social__wrap ul li:nth-child(3) a {
+    background: url(https://coffeepos.com.ua/wp-content/uploads/2018/04/fb_icon.png) no-repeat 0 0;
+}
+
+.social__wrap ul li a:hover {
+    background-position: -34px 0;
+}
+
+.header__langSwitcherWrap .widget.widget_polylang ul:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header__langSwitcherWrap .widget.widget_polylang ul>li {
+    float: left;
+    padding: 0 8px;
+    border-right: 1px solid #c6cdcd;
+}
+
+.header__langSwitcherWrap .widget.widget_polylang ul>li:first-child {
+    padding-left: 0;
+}
+
+.header__langSwitcherWrap .widget.widget_polylang ul>li:last-child {
+    padding-right: 0;
+    border-right: 0;
+}
+
+.header__langSwitcherWrap .widget.widget_polylang ul>li a {
+    font-family: "RobotoCondRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    color: #c6cdcd;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.header__langSwitcherWrap .widget.widget_polylang ul>li a:hover {
+    text-decoration: none;
+}
+
+.header__langSwitcherWrap .widget.widget_polylang ul>li.current-lang a {
+    color: #f36f46;
+}
+
+.header__hamburger {
+    display: none;
+}
+
+.mfp-content {
+    vertical-align: top !important;
+    padding: 29px 0 40px;
+}
+
+.mfp-container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.menu__popup .mfp-content {
+    background-color: #3a355d;
+    padding: 0 !important;
+}
+
+.menu__popup .mfp-content .header__contWrap {
+    padding: 29px 0 40px;
+}
+
+.authHidden,
+.phoneHidden {
+    display: none;
+}
+
+.mfp-content .header__authWrap,
+.mfp-content .header__phone {
+    display: none;
+}
+
+.mfp-content .header__authWrap.authHidden,
+.mfp-content .header__phone.phoneHidden {
+    display: block;
+}
+
+.mfp-content .header__authWrap.authHidden {
+    float: none;
+    text-align: center;
+}
+
+.mfp-content .header__authWrap.authHidden .header__authLink {
+    display: inline-block;
+}
+
+.mfp-content .header__menuWrap {
+    float: none;
+}
+
+.mfp-content .header__menuWrap ul li {
+    float: none;
+    margin: 0;
+    text-align: center;
+}
+
+.mfp-content .header__menuWrap ul li a {
+    font-size: 22px;
+}
+
+.mfp-content .header__phone.phoneHidden {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    float: none;
+    color: #fff;
+    padding-left: 24px;
+}
+
+.mfp-content .header__phone.phoneHidden:before {
+    height: 17px;
+    width: 17px;
+    background-image: url(https://coffeepos.com.ua/wp-content/uploads/2018/04/phone_header_hidden.png);
+    -webkit-background-size: 17px 17px;
+    background-size: 17px 17px;
+    top: 8px;
+}
+
+.mfp-content .header__socialLangWrap {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+}
+
+.mfp-content .header__authLink {
+    height: 43px;
+    line-height: 43px;
+    font-size: 22px;
+    background-color: transparent;
+    color: #f36f46;
+
+    margin-bottom: 28px;
+}
+
+.mfp-content .header__menuWrap ul:before {
+    display: none;
+}
+
+.mfp-content .header__menuWrap ul li a:hover {
+    border-color: transparent;
+    background-color: #2e2a4f;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(31, 28, 55, 0.51) inset;
+    -moz-box-shadow: 0px 0px 3px 0px rgba(31, 28, 55, 0.51) inset;
+    box-shadow: 0px 0px 3px 0px rgba(31, 28, 55, 0.51) inset;
+}
+
+.mfp-content .social__wrap ul li a {
+    width: 24px;
+    height: 24px;
+    -webkit-background-size: 48px 24px;
+    background-size: 48px 24px;
+}
+
+.mfp-content .social__wrap ul li a:hover {
+    background-position: -24px 0px;
+}
+
+.popup_inline .mfp-close {
+    height: auto !important;
+    width: auto !important;
+    line-height: 10px !important;
+    padding: 15px !important;
+
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+    color: #fff !important;
+    text-align: center !important;
+}
+
+.mfp-bg {
+    background-color: #000 !important;
+    opacity: .69 !important;
+}
+
+@media ( max-width: 1600px ) {
+	.header__inner {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .header__socialsWrap {
+        position: relative;
+        top: 10px;
+    }
+
+    .header__logoWrap a img {
+        width: 300px;
+    }
+
+    .header__socialLangWrap {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .header__socialLangWrap ul {
+        margin-bottom: 0;
+    }
+
+    .header__langSwitcherWrap .widget.widget_polylang ul>li a {
+        font-size: 16px;
+    }
+
+    .header__authLink {
+        line-height: 52px;
+        height: 52px;
+        font-size: 20px;
+    }
+
+    .header__phone {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .header__menuWrap {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .header__menuWrap ul {
+        margin-bottom: 0;
+    }
+
+    .header__menuWrap ul li a {
+        font-size: 20px;
+        line-height: 48px;
+    }
+}
+
+@media ( max-width: 1430px ) {
+    .header__logoWrap a img {
+        width: 260px;
+    }
+
+    .header__authLink {
+        line-height: 47px;
+        height: 48px;
+        font-size: 18px;
+    }
+
+    .header__phone {
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .header__menuWrap ul li a {
+        font-size: 18px;
+        line-height: 42px;
+    }
+
+    .header__phone {
+        padding-left: 40px;
+        line-height: 30px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .header__phone:before {
+        height: 30px;
+        width: 30px;
+        -webkit-background-size: 30px 30px;
+        background-size: 30px 30px;
+    }
+
+    .header__socialLangWrap {
+        margin-left: 20px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    .social__wrap ul li {
+        margin-right: 15px;
+    }
+}
+
+@media ( max-width: 1300px ) {
+    .header__logoWrap a img {
+        width: 182px;
+        margin-top: 9px;
+    }
+}
+
+@media ( max-width: 1199px ) {
+    .header__contWrap {
+        float: none;
+        display: none;
+    }
+
+    .mfp-content .header__contWrap {
+        display: block !important;
+    }
+
+    .header__langSwitcherWrap {
+        float: right;
+        position: static;
+    }
+
+    .header__hamburger {
+        display: block;
+        float: right;
+        margin-left: 25px;
+        outline: none;
+    }
+
+    .header__hamburger:hover,
+    .header__hamburger:focus {
+        outline: none;
+    }
+
+    .header__hamburger img {
+        display: block;
+        max-height: 25px;
+        cursor: pointer;
+    }
+
+    .header__langSwitcherWrap ul {
+        margin-bottom: 0;
+    }
+
+    .header__langSwitcherWrap .widget.widget_polylang ul>li a {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .header__logoWrap a img {
+        margin-top: 0;
+    }
+}
+
+@media ( max-width: 767px ) {
+    .header__inner {
+        padding-top: 17px;
+        padding-bottom: 17px;
+    }
+
+    .header__logoWrap a img {
+        width: 140px;
+    }
+
+    .header__langSwitcherWrap .widget.widget_polylang ul>li a {
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+
+
+@media ( max-width: 420px ) {
+    .header__logoWrap a img {
+        width: 130px;
+    }
+
+    .header__inner {
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    .header.sticky .header__inner {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .header__hamburger {
+        margin-left: 21px;
+    }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* --------------------------------->>> header End <<<------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* ----------------------------->>> mainForm <<<------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+.mainForm {
+    height: 100vh;
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.mainForm__contentInner {
+    height: 100%;
+    visibility: hidden;
+}
+
+.mainForm__contentInner.visibile {
+    height: 100%;
+    visibility: visible;
+}
+
+.mainForm:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent url(https://coffeepos.com.ua/wp-content/uploads/2018/04/mainForm_bgLeft.png) no-repeat right 0;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+
+    width: 408px;
+    z-index: 0;
+}
+
+.mainForm:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: transparent url(https://coffeepos.com.ua/wp-content/uploads/2018/04/mainForm_bgRight.png) no-repeat left 0;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+
+    width: 270px;
+    z-index: 0;
+}
+
+.mainForm__logoWrap {
+    display: table;
+    margin: 25px 0 35px;
+}
+
+.mainForm__logoText {
+    display: table-cell;
+
+    font-family: "MonseratAlternatesSemibold", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 72px;
+    line-height: 1;
+    color: #fff;
+    white-space: nowrap;
+    vertical-align: bottom;
+
+    padding: 0 0 0 28px;
+}
+
+.mainForm__logoSlogan {
+    display: table-cell;
+    font-family: "RobotoCondLight", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 36px;
+    color: #fff;
+    padding: 0 0 0 34px;
+    vertical-align: bottom;
+}
+
+.mainFormItem__imageWrap {
+    padding-top: 22px;
+}
+
+.mainFormItem__img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.mainFormItem__note {
+    font-family: "RobotoCondLight", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    color: #fff;
+    margin: 0 0 14px;
+    text-align: center;
+    padding: 0 0 0 10%;
+}
+
+.mainFormItem__note__bottom {
+    padding: 0;
+}
+
+.mainFormItem__formTitle {
+    font-family: "RobotoCondLight", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 36px;
+    color: #fff;
+    position: relative;
+    line-height: 2.5;
+    padding-bottom: 30px;
+}
+
+.mainForm__wrapIn {
+    width: 370px;
+    margin: 0 auto 0 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.mainForm__arrowWrap {
+    text-align: center;
+    padding: 14px 0;
+}
+
+.mainForm__arrowWrap:before {
+    content: '';
+    display: inline-block;
+    width: 112px;
+    height: 28px;
+    background: url(https://coffeepos.com.ua/wp-content/uploads/2018/04/mainForm_arrowDown.png) no-repeat 0 0;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.mainFormItem__formTitle span {
+    font-family: "RobotoCondBold", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #fff;
+    font-size: 45px;
+    text-transform: uppercase;
+    line-height: 45px;
+}
+
+.mainFormItem__formDnldLinkWrap {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.mainFormItem__formDnldLinkWrap>a {
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+    cursor: pointer;
+    padding: 21px 0 25px;
+    border: 1px solid #558b2f;
+    background-color: #558b2f;
+    font-family: "RobotoCondRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    color: #fefefe;
+    text-decoration: none;
+    line-height: 1;
+    height: 68px;
+    -webkit-border-radius: 34px;
+    -moz-border-radius: 34px;
+    border-radius: 34px;
+
+    -webkit-transition: all .6s ease 0s;
+    -moz-transition: all .6s ease 0s;
+    -o-transition: all .6s ease 0s;
+    transition: all .6s ease 0s;
+
+    position: relative;
+    z-index: 1;
+}
+
+.mainFormItem__formDnldLinkWrap>a:hover,
+.mainFormItem__formDnldLinkWrap>a:focus:hover {
+    background-color: transparent;
+    text-decoration: none;
+    color: #558b2f;
+}
+
+.mainFormItem__formDnldLinkWrap>a:focus {
+    background-color: #558b2f;
+    text-decoration: none;
+    color: #fefefe;
+}
+
+.mainFormItem__formWrap {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    display: none;
+}
+
+.mainFormItem__formWrap.animate {
+    display: none;
+}
+
+.mainFormItem__formWrap>section {
+    background-color: rgba(0, 0, 0, .5);
+    padding: 0 20px;
+
+    -webkit-transition: all .6s ease 0s;
+    -moz-transition: all .6s ease 0s;
+    -o-transition: all .6s ease 0s;
+    transition: all .6s ease 0s;
+}
+
+.mainFormItem__formWrap.toggled>section {
+    background-color: rgba(0, 0, 0, .9);
+
+}
+
+.animate>section {
+    -webkit-transition: all .6s ease 0s;
+    -moz-transition: all .6s ease 0s;
+    -o-transition: all .6s ease 0s;
+    transition: all .6s ease 0s;
+}
+
+.mainFormItem__tabSectWrap {
+    -webkit-transition: all .6s ease 0s;
+    -moz-transition: all .6s ease 0s;
+    -o-transition: all .6s ease 0s;
+    transition: all .6s ease 0s;
+    padding-bottom: 25px;
+    max-height: 300px;
+}
+
+.slideToggle .mainFormItem__tabSectWrap {
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/*.hidden__tabs {
+    opacity: 0;
+    max-height: 0;
+    margin-bottom: 0;
+
+    -webkit-transition: all .6s ease .6s;
+    -moz-transition: all .6s ease .6s;
+    -o-transition: all .6s ease .6s;
+    transition: all .6s ease .6s;
+}
+
+.slideToggle .hidden__tabs {
+    opacity: 1;
+    max-height: 100px;
+}*/
+
+.mainForm__inWrap {
+    height: 100%;
+}
+
+.mainForm__tabs:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*
+.mainForm__tabs>li:first-child {
+    float: left;
+    padding-left: 12px;
+}
+
+.mainForm__tabs>li:last-child {
+    float: right;
+    padding-right: 12px;
+}
+*/
+
+.mainForm__tabs {
+    padding: 11px 0;
+    margin-bottom: 0;
+}
+
+.mainForm__tab {
+    text-align: center;
+    position: relative;
+}
+
+.mainForm__tabs>li>span,
+.mainForm__tabs>li>a {
+    font-family: "RobotoCondRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 22px;
+    color: #fefefe;
+    cursor: pointer;
+    text-decoration: none;
+
+    -webkit-transition: all .6s ease 0s;
+    -moz-transition: all .6s ease 0s;
+    -o-transition: all .6s ease 0s;
+    transition: all .6s ease 0s;
+}
+
+.mainForm__tabs>li>span:hover,
+.mainForm__tabs>li>span:focus,
+.mainForm__tabs>li>a:hover,
+.mainForm__tabs>li>a:focus {
+    text-decoration: none;
+    outline: none;
+    color: #f36f46;
+}
+
+.hidden__tab.active>span,
+.hidden__tab.active>a,
+.mainForm__tabs>li.active>span,
+.mainForm__tabs>li.active>a{
+    color: #f36f46 !important;
+}
+
+.hidden__tab {
+    text-align: center !important;
+}
+
+.mainForm__tab.active {
+    color: #f36f46;
+}
+
+.mainFormItem__formItem {
+    position: relative;
+}
+
+.mainFormItem__formItem:not(:last-child) {
+    margin: 0 0 28px;
+}
+
+.mainFormItem__formItem input {
+    width: 100%;
+    display: block;
+    padding: 10px 9px;
+    border: 1px solid #f36f46;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    background-color: rgba(253, 253, 253, .1);
+
+    font-family: "RobotoCondLight", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    color: #fff;
+}
+
+.mainFormItem__formItem input[type="submit"] {
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 12px 41px;
+    color: #f36f46;
+    font-family: "RobotoCondRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    text-align: center;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+}
+
+input::-webkit-input-placeholder {
+    font-family: "RobotoCondLight", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    color: #fff;
+}
+input::-moz-placeholder {
+    font-family: "RobotoCondLight", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    color: #fff;
+}
+input:-ms-input-placeholder {
+    font-family: "RobotoCondLight", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    color: #fff;
+}
+input:-moz-placeholder {
+    font-family: "RobotoCondLight", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    color: #fff;
+}
+
+.formTogleBtn{
+    display: none;
+}
+
+@media ( min-width: 1201px ) {
+    .formTogleBtn {
+        display: block;
+        color: #fff;
+        font-size: 29px;
+        line-height: 1;
+        cursor: pointer;
+
+        position: absolute;
+        right: 0;
+        top: 50%;
+        -webkit-transform: translateX( 0 ) translateY( -50% );
+        -moz-transform: translateX( 0 ) translateY( -50% );
+        -ms-transform: translateX( 0 ) translateY( -50% );
+        -o-transform: translateX( 0 ) translateY( -50% );
+        transform: translateX( 0 ) translateY( -50% );
+    }
+
+    .animate.slideToggle .formTogleBtn{
+        display: none;
+
+    }
+
+    .mfp-content .formTogleBtn {
+        display: none;
+    }
+}
+
+
+
+.reg__popup .mfp-content {
+    background-color: rgba(27, 27, 48, .95);
+    padding: 0 !important;
+    max-width: 450px;
+}
+
+.reg__popup .mfp-content:before {
+    display: none !important;
+}
+
+.reg__popup .mfp-content .mainFormItem__tabSectWrap {
+    padding: 29px 15px 40px;
+    width: 100%;
+    height: 100%;
+    max-height: none !important;
+    display: block !important;
+}
+
+
+.reg__popup .mfp-content .mainFormItem__tabSectWrap:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.reg__popup .mfp-content .mainFormItem__tabSectInner {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.reg__popup .mfp-content .mainFormItem__formItem input {
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 18px !important;
+}
+
+.reg__popup .mainFormItem__formItem:not(:last-child) {
+    margin-bottom: 41px !important;
+}
+
+.reg__popup .mainForm__tabs {
+    margin-bottom: 40px;
+}
+
+.reg__popup .mainForm__tabs>li>span {
+    font-size: 18px;
+}
+
+.mfp-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.mainFormItem__tabSectionPopupTitle {
+    display: none;
+    text-align: center;
+    color: #f36f46;
+    font-family: "RobotoCondRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 22px;
+    margin: 0 0 40px;
+}
+
+.mfp-content .mainFormItem__tabSectionPopupTitle {
+    display: block;
+}
+
+@media ( max-width: 767px ) {
+    .reg__popup .mainForm__tabs>li>span {
+        font-size: 15px;
+    }
+}
+
+.reg__popup .mainForm__tabs>li.active>span {
+    color: #f36f46;
+}
+
+.reg__popup .mfp-content .mainForm__tabs>li {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: center !important;
+}
+
+@media ( max-width: 450px ) {
+	.reg__popup .mfp-content:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+	.reg__popup .mfp-content .mainFormItem__tabSectWrap {
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+    }
+}
+
+@media ( max-width: 1200px ) {
+    .mainForm__contentInner {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .mainForm__contentInner:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+    .mainForm__item,
+    .mainFormItem__formTitle,
+    .mainForm__arrowWrap,
+    .mainFormItem__note.hidden {
+        position: relative;
+        z-index: 1;
+    }
+
+    .mainFormItem__itemImg,
+    .mainFormItem__itemForm {
+        width: 100% !important;
+    }
+
+    .mainFormItem__imageWrap {
+        display: none;
+    }
+
+    .mainForm__logoWrap {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5px;
+    }
+
+    .mainForm__logoText {
+        padding-left: 0;
+    }
+
+    .mainFormItem__note {
+        padding-left: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .mainFormItem__formTitle {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mainForm {
+        /*padding-bottom: 42px;*/
+        background: url(https://coffeepos.com.ua/wp-content/uploads/2018/05/composition-1.png) -208px 102% no-repeat, url(https://coffeepos.com.ua/wp-content/uploads/2018/05/mainForm_bg-1.jpg) 0px 0px no-repeat !important;
+
+        -webkit-background-size: auto auto, cover !important;
+        background-size: auto auto, cover !important;
+    }
+
+	.mainForm__container {
+        padding-bottom: 0;
+        height: 100%;
+        position: static;
+    }
+
+    .mainFormItem__itemForm,
+    .mainForm__wrapIn {
+        position: static !important;
+    }
+
+    .mainForm__logoText {
+        font-size: 65px;
+    }
+
+    .mainForm__logoSlogan {
+        font-size: 30px;
+    }
+
+    .mainFormItem__formTitle {
+        font-size: 30px;
+    }
+
+    .mainFormItem__formTitle span {
+        font-size: 36px;
+    }
+
+
+    .mainForm__wrapIn {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .mainForm__arrowWrap:before {
+        width: 80px;
+        height: 20px;
+    }
+
+    .mainFormItem__formDnldLinkWrap {
+        margin-bottom: 20px;
+    }
+
+    .mainFormItem__note {
+        display: none;
+    }
+
+    .mainFormItem__note.hidden {
+        display: block !important;
+        padding: 0 !important;
+    }
+
+    .mainForm__tabs.hidden__tabs {
+        display: block;
+        margin-bottom: 0;
+        background-color: rgba(0, 0, 0, .35);
+    }
+
+    .mainForm__tabs>li {
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-bottom: 0 !important;
+
+        text-align: center;
+    }
+
+    .mainForm__tabs>li:first-child {
+        padding-right: 25px !important;
+        /*text-align: right;*/
+    }
+
+    .mainForm__tabs>li:last-child {
+        padding-left: 25px !important;
+        /*text-align: left;*/
+    }
+
+    .mainForm__tabs>li>a {
+        line-height: 42px;
+        display: inline-block;
+        color: #fefefe;
+    }
+
+
+}
+
+@media ( max-width: 992px ) {
+    .mainForm__logoText {
+        font-size: 50px;
+    }
+
+    .mainForm__logoSlogan {
+        font-size: 22px;
+    }
+
+    .mainFormItem__formTitle {
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+    .mainFormItem__formTitle span {
+        font-size: 30px;
+    }
+
+    .mainFormItem__formDnldLinkWrap>a {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: 63px;
+        width: 270px;
+    }
+
+    .mainFormItem__note {
+        font-size: 18px;
+    }
+}
+
+@media ( max-width: 767px ) {
+    .mainForm__logoWrap {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mainForm__logoText {
+        display: block;
+        padding: 0;
+        margin-bottom: 15px;
+        font-size: 52px;
+    }
+
+    .mainForm__logoSlogan {
+        margin-bottom: 15px;
+        display: block;
+        padding: 0;
+    }
+
+    .mainFormItem__formDnldLinkWrap>a {
+        font-size: 20px;
+        height: 40px;
+        line-height: 40px;
+        white-space: nowrap;
+        width: auto;
+        padding-left: 54px;
+        padding-right: 54px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .mainFormItem__formTitle span {
+        font-size: 24px;
+        line-height: 1.5;
+    }
+
+    .mainForm__arrowWrap {
+        display: none;
+    }
+
+    .mainFormItem__note.hidden {
+        font-size: 15px;
+        /*display: none !important;*/
+    }
+
+    .mainFormItem__formDnldLinkWrap {
+        margin: 20px 0;
+    }
+
+    .mainFormItem__formDnldLinkWrap {
+        padding: 30px 0;
+    }
+}
+
+@media ( max-width: 500px ) {
+    .mainForm:before {
+        width: 180px;
+    }
+
+    .mainForm:after {
+        width: 94px;
+    }
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* ----------------------------->>> mainForm End <<<------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+.advantsCapabs {
+    padding: 40px 0 0;
+    position: relative;
+}
+
+.advantsCapabs:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(https://coffeepos.com.ua/wp-content/uploads/2018/04/bg_left.png) no-repeat 0 0;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    width: 133px;
+    height: 498px;
+    z-index: 0;
+}
+
+.advantsCapabs:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(https://coffeepos.com.ua/wp-content/uploads/2018/04/bg_right.png) no-repeat 0 0;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    width: 448px;
+    height: 995px;
+    z-index: 0;
+}
+
+@media ( max-width: 500px ) {
+    .advantsCapabs:before {
+        width: 59px;
+        height: 257px;
+    }
+
+    .advantsCapabs:after {
+        display: none;
+    }
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* ----------------------------->>> advants <<<------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+
+.advants {
+    padding: 40px 0 0;
+    position: relative;
+    z-index: 1;
+}
+
+.advants__title,
+.capabs__titleInner {
+    font-family: "RobotoCondBold", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 48px;
+    line-height: 1.1;
+    color: #717171;
+    text-align: center;
+    margin: 0 0 50px;
+}
+
+.border-bottom-orange {
+    border-bottom: 2px solid #f36f46;
+    line-height: 1.1;
+    display: inline-block;
+}
+
+.border-bottom-green {
+    border-bottom: 2px solid #00695c;
+    line-height: 1.1;
+    display: inline-block;
+}
+
+.advants__tabsHeaderList {
+    display: table;
+    width: 100%;
+}
+
+.advants__tabsHeader {
+    display: table-cell;
+    text-align: center;
+    background-color: rgba(153, 151, 172, .05);
+    padding: 8px;
+    vertical-align: middle;
+    border-right: 1px solid #c6cdcd;
+    border-bottom: 1px solid #c6cdcd;
+    border-top: 5px solid transparent;
+    cursor: pointer;
+    
+    font-family: "RobotoCondLight", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    color: #000;
+}
+
+.advants__tabsHeader:nth-child(1),
+.advants__tabsItem:nth-child(1) .advants__tabsHeader {
+    border-top-color: #f36f46;
+}
+
+.advants__tabsHeader:nth-child(2),
+.advants__tabsItem:nth-child(2) .advants__tabsHeader {
+    border-top-color: #283fa6;
+}
+
+.advants__tabsHeader:nth-child(3),
+.advants__tabsItem:nth-child(3) .advants__tabsHeader {
+    border-top-color: #0fa67f;
+}
+
+.advants__tabsHeader:nth-child(4),
+.advants__tabsItem:nth-child(4) .advants__tabsHeader {
+    border-top-color: #fa3b5f;
+}
+
+.advants__tabsHeader.active {
+    border-bottom-color: transparent;
+    background-color: transparent;
+    font-family: "RobotoCondRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.advants__tabsHeader:last-child.active {
+    border-right-color: transparent;
+}
+
+.advants__tabsHeader:first-child {
+    border-left: 1px solid #c6cdcd;
+}
+
+.advants__tabsHeader:first-child.active {
+    border-left-color: transparent;
+}
+
+.advants__tabsHeaderHidden {
+    display: none;
+}
+
+.advants__tabsSection {
+    padding: 30px 20px;
+    font-family: "RobotoCondLight", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    color: #626262;
+}
+
+.advants__tabsWrap {
+    position: relative;
+}
+
+.advants__line {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 25%;
+    background-color: #f36f46;
+}
+
+.capabs__col.col-lg-3:nth-child(4n+1),
+.capabs__col.col-md-3:nth-child(4n+1),
+.capabs__col.col-sm-3:nth-child(4n+1),
+.capabs__col.col-xs-3:nth-child(4n+1) {
+    clear: both;
+}
+
+.capabs__col.col-lg-4:nth-child(5n+1),
+.capabs__col.col-md-4:nth-child(5n+1),
+.capabs__col.col-sm-4:nth-child(5n+1),
+.capabs__col.col-xs-4:nth-child(5n+1) {
+    clear: both;
+}
+
+@media ( max-width: 991px ) {
+    .advants__tabsHeaderList {
+        display: none;
+    }
+
+    .advants__tabsHeader.advants__tabsHeaderHidden {
+        display: block;
+    }
+
+    .advants__tabsHeader.advants__tabsHeaderHidden {
+        border-left: 1px solid #c6cdcd !important;
+        border-right: 1px solid #c6cdcd !important;
+    }
+
+    .advants__tabsHeader.advants__tabsHeaderHidden.active {
+        border-left-color: transparent !important;
+        border-right-color: transparent !important;
+    }
+
+    .advants__tabsItem:last-child {
+        border-bottom: 1px solid #c6cdcd !important;
+    }
+
+    .advants__line {
+        display: none;
+    }
+
+    .advants__tabsSection {
+        margin-bottom: 6px;
+    }
+
+    .advants__tabsHeader.advants__tabsHeaderHidden {
+        position: relative;
+    }
+
+    .advants__tabsHeader.advants__tabsHeaderHidden:after {
+        content: '❬';
+        display: block;
+        width: 15px;
+        height: 10px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        font-size: 25px;
+        color: #626262;
+
+        -webkit-transform: rotate( -90deg );
+           -moz-transform: rotate( -90deg );
+            -ms-transform: rotate( -90deg );
+             -o-transform: rotate( -90deg );
+                transform: rotate( -90deg );
+
+        -webkit-transform-origin: 0% 0%;
+           -moz-transform-origin: 0% 0%;
+            -ms-transform-origin: 0% 0%;
+             -o-transform-origin: 0% 0%;
+                transform-origin: 0% 0%;
+    }
+
+    .advants__tabsHeader.advants__tabsHeaderHidden.active:after {
+        -webkit-transform: rotate( 90deg );
+        -moz-transform: rotate( 90deg );
+        -ms-transform: rotate( 90deg );
+        -o-transform: rotate( 90deg );
+        transform: rotate( 90deg );
+        top: 10px;
+        right: -13px;
+    }
+
+    .advants__tabsItem:nth-child(1) .advants__tabsHeader.advants__tabsHeaderHidden:after {
+        color: #f36f46;
+    }
+
+    .advants__tabsItem:nth-child(2) .advants__tabsHeader.advants__tabsHeaderHidden:after {
+        color: #283fa6;
+    }
+
+    .advants__tabsItem:nth-child(3) .advants__tabsHeader.advants__tabsHeaderHidden:after {
+        color: #0fa67f;
+    }
+
+    .advants__tabsItem:nth-child(4) .advants__tabsHeader.advants__tabsHeaderHidden:after {
+        color: #fa3b5f;
+    }
+}
+
+@media ( max-width: 767px ) {
+    .advants__title,
+    .capabs__titleInner {
+        font-size: 28px;
+        margin-bottom: 17px;
+    }
+
+    .advants__tabsHeader {
+        font-size: 20px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    .advants__tabsSection {
+        font-size: 20px;
+        padding: 0 0 15px;
+    }
+}
+
+@media ( max-width: 420px ) {
+    .advants__title,
+    .capabs__titleInner {
+        font-size: 26px;
+    }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* -------------------------------->>> advants End <<<------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* ------------------------------------->>> capabs <<<------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+.capabs {
+    position: relative;
+    padding: 40px 0 0;
+    z-index: 1;
+}
+
+.capabs__row {
+    position: relative;
+}
+
+.capabs__row:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
+    height: 1px;
+    background-color: #3c3760;
+
+    -webkit-transform: translateX( -50% ) translateY( 0 );
+       -moz-transform: translateX( -50% ) translateY( 0 );
+        -ms-transform: translateX( -50% ) translateY( 0 );
+         -o-transform: translateX( -50% ) translateY( 0 );
+            transform: translateX( -50% ) translateY( 0 );
+}
+
+.capabs__container:last-child .capabs__row:before {
+    display: none;
+}
+
+.capabs__col {
+    margin-bottom: 40px;
+}
+
+.capabs__imgContainer {
+    text-align: center;
+    margin: 33px 0;
+}
+
+.capabs__img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+.capabs__img.hover {
+    display: none;
+}
+
+.capabs__col:hover .capabs__img {
+    display: none;
+}
+
+.capabs__col:hover .capabs__img.hover {
+    display: inline-block;
+
+    -webkit-transform:translate3d(0, 0, 0);
+
+    -webkit-animation-name:pulse;
+    -moz-animation-name:pulse;
+    -ms-animation-name:pulse;
+    -o-animation-name:pulse;
+    animation-name:pulse;
+
+    -webkit-animation-duration:0.8s;
+    -moz-animation-duration:0.8s;
+    -ms-animation-duration:0.8s;
+    -o-animation-duration:0.8s;
+    animation-duration:0.8s;
+
+    -webkit-animation-fill-mode:both;
+    -moz-animation-fill-mode:both;
+    -ms-animation-fill-mode:both;
+    -o-animation-fill-mode:both;
+    animation-fill-mode:both
+}
+
+@keyframes pulse {
+    0% {
+        transform:scale(1)
+    }
+    50% {
+        transform:scale(1.1)
+    }
+    100% {
+        transform:scale(1)
+    }
+}
+
+.capabs__itemFooter {
+    text-align: center;
+}
+
+.capabs__itemTitle {
+    font-family: "RobotoCondRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    color: #000;
+}
+
+.capabs__itemDescr {
+    font-family: "RobotoCondLight", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    color: #626262;
+}
+
+@media ( max-width: 991px ) {
+    .capabs__row {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+@media ( max-width: 991px ) and ( min-width: 768px ) {
+    .capabs__col.col-sm-4.last:nth-child(4n) {
+        width: 100%;
+    }
+}
+
+@media ( max-width: 767px ) {
+    .capabs__col.col-xs-6.last:nth-child(3n) {
+        width: 100%;
+    }
+
+    .capabs__imgContainer {
+        margin-top: 17px;
+        margin-bottom: 17px;
+    }
+
+    .capabs__img {
+        height: 48px;
+        width: auto;
+    }
+
+    .capabs__itemTitle {
+        font-size: 16px;
+    }
+
+    .capabs__itemDescr {
+        font-size: 16px;
+    }
+
+    .capabs__col {
+        margin-bottom: 15px;
+    }
+
+    .capabs__row:before {
+        display: none !important;
+    }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* --------------------------------->>> capabs End <<<------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* --------------------------------------->>> poss <<<------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+.poss {
+    position: relative;
+    overflow: hidden;
+}
+
+.poss__header {
+    height: 160px;
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+}
+
+.poss__header .container,
+.poss__header .row,
+.poss__header .poss__headerTabsWrap,
+.poss__header .poss__inner,
+.poss__header .poss__headerList {
+    height: 100%;
+}
+
+.poss__headerList {
+    position: relative;
+}
+
+.poss__headerListItem {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    font-family: "RobotoCondBold", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 1.4;
+    color: #adadad;
+    cursor: pointer;
+    white-space: nowrap;
+
+    -webkit-transition: all .8s ease 0s;
+    -moz-transition: all .8s ease 0s;
+    -o-transition: all .8s ease 0s;
+    transition: all .8s ease 0s;
+
+    z-index: 1;
+}
+
+.poss__headerListItem:hover {
+    color: #717171;
+}
+
+.poss__headerListItem:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    width: 78px;
+}
+
+.poss__headerListItem[data-id="owner"]:before {
+    background-color: #00695c;
+}
+
+.poss__headerListItem[data-id="seller"]:before {
+    background-color: #87afdd;
+}
+
+.poss__headerListItem.active {
+    font-size: 48px;
+    line-height: 1.3;
+    color: #717171;
+    /*left: 0;
+    bottom: 37px;*/
+    top: 100%;
+    right: 100%;
+
+    -webkit-transform: translateX( 100% ) translateY( -100% );
+       -moz-transform: translateX( 100% ) translateY( -100% );
+        -ms-transform: translateX( 100% ) translateY( -100% );
+         -o-transform: translateX( 100% ) translateY( -100% );
+            transform: translateX( 100% ) translateY( -100% );
+
+    margin-top: -37px;
+
+    z-index: 2;
+}
+
+.poss__footer {
+    position: relative;
+    height: 400px;
+}
+
+.poss__section {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.poss__section.active {
+    z-index: 3;
+}
+
+/*
+.poss__section {
+    position: absolute;
+    left: -3000px;
+    height: 100%;
+}
+
+.poss__section.active {
+    position: static;
+    height: 100%;
+}
+*/
+
+.poss__section .container,
+.poss__section .row,
+.poss__section .poss__fotterCol {
+    height: 100%;
+}
+
+.poss__section .poss__image {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    /*right: 100%;*/
+
+    right: 3000px;
+    z-index: 2;
+
+    max-width: 735px;
+    height: auto;
+
+    -webkit-transition: all 1s ease 0s;
+    -moz-transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s;
+    transition: all 1s ease 0s;
+}
+
+.poss__section.active .poss__image {
+    z-index: 3;
+
+    right: 0 !important;
+    -webkit-transition: all 1s ease 0s !important;
+    -moz-transition: all 1s ease 0s !important;
+    -o-transition: all 1s ease 0s !important;
+    transition: all 1s ease 0s !important;
+}
+
+.poss__textWrap {
+    font-family: "RobotoCondLight", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 36px;
+    color: #fff;
+
+    display: table;
+    height: 100%;
+    width: 100%;
+
+    left: 100%;
+}
+
+.poss__textWrap>span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.poss__section .poss__textInner {
+    position: absolute;
+    left: 3000px;
+    -webkit-transition: all 1s ease 0s !important;
+    -moz-transition: all 1s ease 0s !important;
+    -o-transition: all 1s ease 0s !important;
+    transition: all 1s ease 0s !important;
+
+    height: 100%;
+    width: 100%;
+}
+
+.poss__section.active .poss__textInner {
+    position: absolute;
+    left: 0;
+    -webkit-transition: all 1s ease 0s !important;
+    -moz-transition: all 1s ease 0s !important;
+    -o-transition: all 1s ease 0s !important;
+    transition: all 1s ease 0s !important;
+}
+
+.poss__arrowToggleTab {
+    cursor: pointer;
+    color: #fff;
+    font-size: 42px;
+    padding: 0 0 0 10px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.poss__arrowToggleTab:hover,
+.poss__arrowToggleTab:focus,
+.poss__arrowToggleTab:focus:active {
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+}
+
+@media ( max-width: 1199px ) {
+    .poss__headerListItem.active {
+        right: 60px;
+        -webkit-transform: translateX( 0 ) translateY( -100% );
+           -moz-transform: translateX( 0 ) translateY( -100% );
+            -ms-transform: translateX( 0 ) translateY( -100% );
+             -o-transform: translateX( 0 ) translateY( -100% );
+                transform: translateX( 0 ) translateY( -100% );
+    }
+
+    .poss__headerListItem {
+        font-size: 30px;
+    }
+
+    .poss__headerListItem.active {
+        font-size: 42px;
+    }
+
+    .poss__textWrap {
+        font-size: 30px;
+    }
+}
+
+@media ( max-width: 991px ) {
+    .poss__header {
+        height: 285px;
+    }
+
+    .poss__headerListItem {
+        margin-top: 0 !important;
+    }
+
+    .poss__headerListItem.active {
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+        top: 50px;
+        right: 0;
+    }
+
+    .poss__header .container,
+    .poss__header .row,
+    .poss__header .poss__headerTabsWrap,
+    .poss__header .poss__inner,
+    .poss__header .poss__headerList {
+        height: auto;
+    }
+
+    .poss__footer {
+        height: 218px;
+    }
+
+    .poss__fotterCol {
+        height: auto !important;
+    }
+
+    .poss__imageWrap {
+        height: 90px;
+    }
+
+    .poss__section.active .poss__image {
+        right: 100% !important;
+        -webkit-transform: translateX( 100% ) translateY( 0 );
+           -moz-transform: translateX( 100% ) translateY( 0 );
+            -ms-transform: translateX( 100% ) translateY( 0 );
+             -o-transform: translateX( 100% ) translateY( 0 );
+                transform: translateX( 100% ) translateY( 0 );
+    }
+
+    .poss__section .poss__image {
+        height: 254px;
+    }
+
+    .poss__headerListItem {
+        font-family: "RobotoCondBold", sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 22px;
+    }
+
+    .poss__headerListItem.active {
+        font-size: 28px;
+    }
+
+    .poss__textWrap {
+        font-size: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media ( max-width: 768px ) {
+    .poss__arrowToggleTab {
+        color: #f36f46;
+        font-size: 100px;
+        top: -265px;
+        right: 0;
+        position: absolute;
+    }
+
+    .poss__arrowToggleTab:hover,
+    .poss__arrowToggleTab:focus,
+    .poss__arrowToggleTab:focus:active {
+        color: #f36f46;
+    }
+}
+
+@media ( max-width: 700px ) {
+    .poss__footer {
+        height: 240px;
+    }
+
+    .poss {
+        -webkit-background-size: cover !important;
+        background-size: cover !important;
+    }
+}
+
+@media ( max-width: 500px ) {
+    .poss__footer {
+        height: 320px;
+    }
+}
+
+@media ( max-width: 400px ) {
+    .poss__section.active .poss__image {
+        right: 100% !important;
+        -webkit-transform: translateX( 80% ) translateY( 0 );
+        -moz-transform: translateX( 80% ) translateY( 0 );
+        -ms-transform: translateX( 80% ) translateY( 0 );
+        -o-transform: translateX( 80% ) translateY( 0 );
+        transform: translateX( 80% ) translateY( 0 );
+    }
+
+    .poss__headerListItem:before {
+        width: 50px;
+    }
+
+    /*.poss__footer {
+        height: 280px;
+    }*/
+}
+
+@media ( max-width: 360px ) {
+    .poss__headerListItem {
+        font-size: 21px;
+    }
+
+    .poss__headerListItem.active {
+        font-size: 26px;
+    }
+
+    .poss__arrowToggleTab {
+        font-size: 50px;
+    }
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------->>> poss End <<<------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+/* -------------------------------------->>> dwnld <<<------------------------------------------------- */
+.dwnld {
+    padding: 75px 0;
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+}
+
+.dwnld__title {
+    text-align: center;
+    font-family: "RobotoCondBold", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 48px;
+    color: #717171;
+
+    margin: 0 0 70px;
+}
+
+.dwnld__content {
+    font-family: "RobotoCondLight", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 40px;
+    color: #000;
+
+    margin: 0 0 40px;
+}
+
+.dwnld__content span.blue {
+    font-family: "RobotoCondBold", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 48px;
+    color: #0277bd;
+    text-transform: uppercase;
+}
+
+.dwnld__btnWrap {
+    text-align: center;
+}
+
+.dwnld__btnWrap a {
+    height: 69px;
+    line-height: 65px;
+    font-family: "RobotoCondRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+
+    border: 1px solid;
+    
+    -webkit-border-radius: 34px;
+    -moz-border-radius: 34px;
+    border-radius: 34px;
+    
+    -webkit-transition: all .6s ease 0s;
+    -moz-transition: all .6s ease 0s;
+    -o-transition: all .6s ease 0s;
+    transition: all .6s ease 0s;
+}
+
+.dwnld__btnWrap a:hover {
+    background-color: transparent !important;
+    text-decoration: none;
+}
+
+
+/* ---------------------------------->>> dwnld End <<<------------------------------------------------- */
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* ------------------------------------>>> tryFree <<<------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+.tryFree {
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    background-position: top right !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.tryFree .dwnld__btnWrap a {
+    background-color: #f36f46;
+    border-color: #f36f46;
+    color: #fff;
+    padding: 0 50px;
+}
+
+.tryFree .dwnld__btnWrap a:hover,
+.tryFree .dwnld__btnWrap a:focus:hover {
+    color: #f36f46;
+    text-decoration: none;
+}
+
+.tryFree .dwnld__btnWrap a:focus {
+    background-color: #f36f46;
+    border-color: #f36f46;
+    color: #fff;
+    text-decoration: none;
+}
+
+.tryFree__bgImg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    width: 830px;
+}
+
+@media ( max-width: 1650px ) {
+    .tryFree__bgImg {
+        width: 750px;
+    }
+}
+
+@media ( max-width: 1500px ) {
+    .tryFree__bgImg {
+        width: 650px;
+    }
+}
+
+@media ( max-width: 1199px ) {
+    .tryFree__bgImg {
+        right: -100px;
+    }
+
+    .dwnld__content {
+        font-size: 32px;
+    }
+
+    .dwnld__content span.blue {
+        font-size: 40px;
+    }
+}
+
+@media ( max-width: 991px ) {
+    .dwnld__content {
+        font-size: 28px;
+    }
+
+    .dwnld__content span.blue {
+        font-size: 36px;
+    }
+
+    .dwnld {
+        padding-top: 40px;
+        padding-bottom: 47px;
+    }
+
+    .dwnld__title {
+        font-size: 44px;
+    }
+
+    .tryFree__bgImg {
+        right: -220px;
+    }
+}
+
+@media ( max-width: 767px ) {
+	.dwnld__title {
+        margin-bottom: 240px;
+        font-size: 27px;
+    }
+
+    .tryFree__bgImg {
+        top: 130px;
+        right: -145px;
+        bottom: auto;
+    }
+
+    .dwnld__content span.blue {
+        font-size: 30px;
+    }
+
+    .dwnld__content {
+        font-size: 20px;
+    }
+
+    .dwnld__btnWrap a {
+        font-size: 20px;
+        height: 44px;
+        line-height: 44px;
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+}
+
+@media ( max-width: 500px ) {
+    .tryFree__bgImg {
+        display: none;
+    }
+
+    .tryFree {
+        background: url(https://coffeepos.com.ua/wp-content/uploads/2018/04/tryFree_bg_phone.jpg) no-repeat 0 0 !important;
+        background-position: right 38% !important;
+        -webkit-background-size: cover !important;
+        background-size: cover !important;
+
+    }
+}
+
+@media ( max-width: 380px ) {
+    .tryFree {
+        background-position: 10% 38% !important;
+        -webkit-background-size: cover !important;
+        background-size: cover !important;
+    }
+
+    .tryFree .dwnld__content {
+        padding-left: 30px;
+    }
+
+    .dwnld__title {
+        margin-bottom: 150px;
+    }
+
+    .dwnld__content span.blue {
+        display: block;
+    }
+
+    .tryFree .dwnld__content br {
+        display: none;
+    }
+}
+/* ---------------------------------------------------------------------------------------------------- */
+/* -------------------------------->>> tryFree End <<<------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------->>> try <<<------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+.try {
+    position: relative;
+    border-bottom: 2px solid #fff;
+    overflow: hidden;
+}
+
+.try>.container {
+    position: relative;
+    z-index: 1;
+}
+
+.try:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 273px;
+    z-index: 0;
+    background: transparent url(https://coffeepos.com.ua/wp-content/uploads/2018/04/try_bg_left.png) no-repeat 0 0;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.try:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 263px;
+    z-index: 0;
+    background: transparent url(https://coffeepos.com.ua/wp-content/uploads/2018/04/try_bg_right.png) no-repeat 0 0;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.try .dwnld__content {
+    font-size: 36px;
+    color: #fff;
+}
+
+.try .dwnld__btnWrap a {
+    background-color: #558b2f;
+    border-color: #558b2f;
+    color: #fff;
+    padding: 0 50px;
+}
+
+.try .dwnld__btnWrap a:hover,
+.try .dwnld__btnWrap a:focus {
+    color: #558b2f;
+}
+
+.try .dwnld__btnWrap a {
+    background-color: #558b2f;
+    border-color: #558b2f;
+    color: #fff;
+    padding: 0 110px;
+}
+
+.try .dwnld__btnWrap a:hover,
+.try .dwnld__btnWrap a:focus:hover {
+    color: #558b2f;
+    text-decoration: none;
+}
+
+.try .dwnld__btnWrap a:focus {
+    background-color: #558b2f;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dwnld__textTop {
+    font-family: "RobotoCondLight", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 44px;
+    color: #fefefe;
+    border-bottom: 2px solid #f36f46;
+    padding: 0 0 15px;
+    margin: 0 0 15px;
+}
+
+.dwnld__textTop span.fontBold {
+    font-family: "RobotoCondBold", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 90px;
+}
+
+.dwnld__textBottom {
+    font-family: "RobotoCondLight", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 36px;
+    color: #fff;
+}
+
+@media ( max-width: 991px ) {
+    .dwnld__textTop {
+        text-align: center;
+    }
+}
+
+@media ( max-width: 767px ) {
+    .dwnld__textTop span.block {
+        display: block;
+    }
+
+    .dwnld__textTop {
+        font-size: 28px;
+    }
+
+    .dwnld__textTop span.fontBold {
+        font-size: 36px;
+    }
+
+    .dwnld__textTop {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .try {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+
+    .try .dwnld__inner {
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+
+    .dwnld__textBottom {
+        font-size: 18px;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .try .dwnld__btnLink {
+        padding-right: 53px;
+        padding-left: 53px;
+    }
+
+    .try:before {
+        left: -115px;
+    }
+
+    .try:after {
+        right: -152px;
+    }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* ------------------------------------>>> try End <<<------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------->>> feedback <<<------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+.feedback {
+    padding: 76px 0;
+    position: relative;
+}
+
+.feedback>.container,
+.feedback>.container-fluid {
+    position: relative;
+    z-index: 1;
+}
+
+.feedback:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    right: 0;
+    width: 128px;
+    height: 479px;
+    background: transparent url(https://coffeepos.com.ua/wp-content/uploads/2018/04/feedback_bg_right.png) no-repeat 0 0;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.feedback__title {
+    font-family: "RobotoCondBold", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 48px;
+    color: #717171;
+    text-align: center;
+    position: relative;
+    display: table;
+
+    margin: 0 auto 75px;
+}
+
+.feedback__title:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    width: 78px;
+    background-color: #1565c0;
+}
+
+.feedback__slide:focus {
+    outline: none;
+}
+
+.feedback__slideInner {
+    padding: 0 23px;
+}
+
+.feedback__imgWrap {
+    float: right;
+    width: 137px;
+    height: 137px;
+    overflow: hidden;
+    position: relative;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.feedback__imgWrap:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(221, 225, 225, 0.5);
+    z-index: 1;
+}
+
+.slick-center .feedback__imgWrap:before {
+    background-color: transparent;
+}
+
+.feedback__userImg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX( -50% ) translateY( -50% );
+       -moz-transform: translateX( -50% ) translateY( -50% );
+        -ms-transform: translateX( -50% ) translateY( -50% );
+         -o-transform: translateX( -50% ) translateY( -50% );
+            transform: translateX( -50% ) translateY( -50% );
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.feedback__itemContent {
+    margin-right: 137px;
+    padding-right: 32px;
+}
+
+.feedback__messageWrap {
+    margin-bottom: 15px;
+}
+
+.feedback__message {
+    position: relative;
+    background-color: #dde1e1;
+    padding: 15px 11px;
+    font-family: "RobotoCondLight", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 13px;
+    color: #fff;
+
+    -webkit-transition: all .6s ease 0s;
+    -moz-transition: all .6s ease 0s;
+    -o-transition: all .6s ease 0s;
+    transition: all .6s ease 0s;
+}
+
+.slick-center .feedback__message {
+    background-color: #0277bd;
+    padding: 20px;
+}
+
+.feedback__message:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 50px;
+    border: 10px solid transparent;
+    border-top-color: #dde1e1;
+    z-index: -1;
+
+    -webkit-transform: translateX( -50% ) translateY( 0 );
+       -moz-transform: translateX( -50% ) translateY( 0 );
+        -ms-transform: translateX( -50% ) translateY( 0 );
+         -o-transform: translateX( -50% ) translateY( 0 );
+            transform: translateX( -50% ) translateY( 0 );
+
+    -webkit-transition: all .6s ease 0s;
+    -moz-transition: all .6s ease 0s;
+    -o-transition: all .6s ease 0s;
+    transition: all .6s ease 0s;
+}
+
+.slick-center .feedback__message:before {
+    border-top-color: #0277bd;
+}
+
+.feedback__userName {
+    font-family: "RobotoCondRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.4 !important;
+    color: #666666;
+}
+
+.slick-center .feedback__userName {
+    color: #000;
+}
+
+.slider__arrow {
+    width: 14px;
+    height: 25px;
+    -webkit-background-size: 100% 100% !important;
+    background-size: 100% 100% !important;
+    display: block;
+    position: absolute;
+    z-index: 10;
+
+    top: 50%;
+    margin-top: -12px;
+}
+
+.prev__slide {
+    background: url(https://coffeepos.com.ua/wp-content/uploads/2018/04/prev_slide.png) no-repeat 0 0;
+    left: 0;
+
+}
+
+.next__slide {
+    background: url(https://coffeepos.com.ua/wp-content/uploads/2018/04/next_slide.png) no-repeat 0 0;
+    right: 0;
+}
+
+@media ( max-width: 991px ) {
+	.feedback__title {
+        font-size: 44px;
+    }
+}
+
+@media ( max-width: 768px ) {
+    .feedback {
+        padding-top: 37px;
+        padding-bottom: 37px;
+    }
+
+    .feedback:after {
+        display: none;
+    }
+
+    .feedback__imgWrap {
+        float: none;
+        display: table;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 16px;
+    }
+
+    .feedback__title {
+        font-size: 26px;
+        margin-bottom: 22px;
+    }
+
+    .feedback__itemContent {
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    .feedback__message:before {
+        display: none;
+    }
+
+    .feedback__message {
+        background-color: transparent !important;
+        color: #717171 !important;
+    }
+}
+
+@media ( max-width: 600px ) {
+	.feedback__imgWrap {
+        width: 80px;
+        height: 80px;
+    }
+
+    .slider__arrow {
+        top: 96px;
+        margin-top: 0;
+    }
+
+    .feedback__message {
+        padding: 3px !important;
+        font-size: 12px;
+    }
+
+    .feedback__userName {
+        font-size: 12px;
+    }
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* ----------------------------->>> feedback End <<<------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* ------------------------------------->>> footer <<<------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+.footer {
+    padding: 32px 0;
+    background: #6b6b6b url(images/footer_bg.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    border-top: 6px solid #3e3535;
+}
+
+.footer__inner:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer__logoWrap {
+    float: left;
+}
+
+.footer__logoWrap a {
+    display: block;
+}
+
+.footer__logoWrap a img {
+    display: inline-block;
+    width: 285px;
+    max-width: 100%;
+    height: auto;
+}
+
+.footer__contWrap {
+    float: right;
+}
+
+.footer__phoneMenuWrap:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer__phone {
+    float: left;
+    position: relative;
+    padding-left: 50px;
+    font-family: "RobotoCondRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 32px;
+    white-space: nowrap;
+    color: #fff;
+    margin: 0 20px 0 0;
+}
+
+.footer__phone:hover,
+.footer__phone:focus,
+.footer__phone:focus:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer__phone:before {
+    content: '';
+    width: 32px;
+    height: 32px;
+    background: url(https://coffeepos.com.ua/wp-content/uploads/2018/04/phone_footer.png) no-repeat 0 0;
+    -webkit-background-size: 32px 32px;
+    background-size: 32px 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.footer__phoneMenuWrap {
+    margin: 0 0 25px;
+}
+
+.footer__menuWrap {
+    float: left;
+}
+
+.footer__menuWrap ul:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer__menuWrap ul li {
+    float: left;
+    padding: 0 16px;
+    position: relative;
+}
+
+.footer__menuWrap ul li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    bottom: 6px;
+    width: 1px;
+    background-color: #c6cdcd;
+}
+
+.footer__menuWrap ul li a {
+    display: block;
+    line-height: 32px;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: all .6s ease 0s;
+    -moz-transition: all .6s ease 0s;
+    -o-transition: all .6s ease 0s;
+    transition: all .6s ease 0s;
+
+    font-family: "RobotoCondLight", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 22px;
+    color: #fff;
+}
+
+.footer__menuWrap ul li a:hover {
+    border-color: #f36f46;
+    text-decoration: none;
+}
+
+.footer__menuWrap ul li a:focus,
+.footer__menuWrap ul li a:focus:active {
+    text-decoration: none;
+}
+
+.footer__tryWrap {
+    margin: 0 0 29px;
+    white-space: nowrap;
+}
+
+.footer__tryWrap:after {
+    content: url(https://coffeepos.com.ua/wp-content/uploads/2018/04/Google_Play.png);
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 25px;
+}
+
+.footer__tryWrap a {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 48px;
+    padding: 0 19px;
+    font-family: "RobotoCondRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 25px;
+    color: #fff;
+    background-color: transparent;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+    border: 1px solid #f36f46;
+    -webkit-transition: all .6s ease 0s;
+    -moz-transition: all .6s ease 0s;
+    -o-transition: all .6s ease 0s;
+    transition: all .6s ease 0s;
+}
+
+.footer__tryWrap a:hover,
+.footer__tryWrap a:focus:hover {
+    background-color: #f36f46;
+    color: #fff;
+    border: 1px solid #f36f46;
+    text-decoration: none;
+}
+
+.footer__tryWrap a:focus {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #f36f46;
+    text-decoration: none;
+}
+
+@media ( max-width: 1199px ) {
+    .footer__logoWrap a img {
+        width: 200px;
+    }
+}
+
+@media ( max-width: 1024px ) {
+    .footer {
+        padding-top: 17px;
+        padding-bottom: 10px;
+    }
+
+    .footer__logoWrap {
+        float: none;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .footer__contWrap {
+        float: none;
+    }
+
+    .footer__phone {
+        float: none;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        font-size: 18px;
+        line-height: 18px;
+        white-space: nowrap;
+        padding-left: 21px;
+    }
+
+    .footer__phone:before {
+        width: 15px;
+        height: 15px;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+        top: 2px;
+    }
+
+    .footer__menuWrap {
+        float: none;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer__menuWrap ul li a {
+        font-size: 18px;
+    }
+
+    .footer__menuWrap ul li:first-child:before {
+        display: none;
+    }
+
+    .footer__tryWrap {
+        text-align: center;
+    }
+
+    .footer__socialsWrap {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer__menuWrap ul li a:hover {
+        border-color: transparent;
+        text-decoration: none;
+    }
+}
+
+@media ( max-width: 767px ) {
+    .footer__logoWrap a img {
+        width: 163px;
+    }
+
+    .footer__menuWrap ul li {
+        width: 50%;
+        text-align: center;
+    }
+
+    .footer__menuWrap ul li:nth-child(odd):before {
+        display: none;
+    }
+
+    .footer__menuWrap ul li a {
+        display: inline-block;
+        text-align: left;
+        min-width: 125px;
+    }
+
+    .footer__tryWrap a {
+        font-size: 14px;
+        padding-left: 7px;
+        padding-right: 7px;
+        line-height: 27px;
+    }
+
+    .footer__tryWrap:after {
+        display: none;
+    }
+
+    .footer__socialsWrap .social__wrap ul li a {
+        width: 25px;
+        height: 25px;
+        -webkit-background-size: 50px 25px !important;
+        background-size: 50px 25px !important;
+    }
+
+    .footer__socialsWrap .social__wrap ul li a:hover {
+        background-position: -25px 0px;
+    }
+
+    .footer__socialsWrap .social__wrap ul:after {
+        content: '';
+        background: url(https://coffeepos.com.ua/wp-content/uploads/2018/04/Google_Play.png) no-repeat 0 0;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 25px;
+        height: 25px;
+        vertical-align: top;
+        margin-left: 15px;
+    }
+
+    .footer__socialsWrap .social__wrap ul {
+        padding-right: 40px;
+        position: relative;
+    }
+
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* --------------------------------->>> footer End <<<------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
